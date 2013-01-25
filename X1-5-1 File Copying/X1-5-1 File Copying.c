@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/* copy input to output one character at a time */
+int main(void)
+{
+
+/* Version 1 */
+//    char a = getchar();
+//    while (a != EOF){
+//        putchar(a);
+//        a = getchar();
+//    }
+
+/* Version 2 */
+    int a;
+    while ((a = getchar()) != EOF){
+        putchar(a);
+    }
+
+    return 0;
+}

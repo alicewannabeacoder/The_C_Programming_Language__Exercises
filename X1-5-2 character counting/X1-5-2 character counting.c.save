@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+/* Count character number of the string you enter */
+int main(void)
+{
+    
+    return 0;
+}

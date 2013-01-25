@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+    int Fah;
+#    int 
+    for (Fah = 0; Fah <= 300; Fah += 2)
+}

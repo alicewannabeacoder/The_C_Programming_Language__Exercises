@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int c  = 0;
+    int nb = 0;
+    while ((c = getchar()) != EOF){
+        if (c == ' ')
+            nb++;
+        else{
+            nb = 0;
+            printf("%s", c);
+        }
+        
+    }
+    return 0;
+}
