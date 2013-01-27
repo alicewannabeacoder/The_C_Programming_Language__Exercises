@@ -1,0 +1,43 @@
+#include <stdio.h>
+#define WORD  1
+#define SPACE 0
+
+/* Exercise 1-13 Write a program to print a histogram of the lengths of words in its input. It is easy
+    to draw the histogram with the bars horizontal; a vertical orientation is more challenging.
+
+    ---HORIZONTAL--- */
+int main(void)
+{
+    int c, i, nl, state;
+    int nlength[1000];
+
+    c = 0;
+    for (i = 0; i < 1000; ++i)   // initiate all staff to 0.
+        nlength[i] = 0;
+    i = 0;
+
+    while ((c = getchar()) != EOF){
+        if (c == ' ' || c == '\t' || c == '\n')
+            state = 0;
+        else if (state == 0){
+            state = 1;
+            ++i;
+            ++nlength[i];
+        }
+        else
+            ++nlength[i];
+    }
+
+    for (i = 0; i < 1000; ++i){
+        if (nlength[i] == 0)   // stop the printing if the left spaces of the array were not been filled. 
+            break;
+        printf("Word %4d |", i);
+        for (nl = 0; nl < nlength[i]; nl++){
+
+            printf("-");
+        }
+        printf("\t%d\n", nlength[i]);
+    }
+
+    return 0;
+}
